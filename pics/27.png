@@ -1,0 +1,24 @@
+#!/bin/bash
+FILES=*
+i=0
+str=".png"
+str1="yo.sh"
+str2="tp.txt"
+str3="tp1.txt"
+mv "$str2" "$str3"
+for f in $FILES
+do
+if [ "$str1" != "$f" ];
+        then
+                #echo "$i Processing $f file..."
+				  let i=$i+1
+				  j="$i$str"
+				  echo $j
+
+				  mv "$f" "$j"
+        fi
+  
+  #mv $f $j
+  # take action on each file. $f store current file name
+done
+
